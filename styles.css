@@ -1,0 +1,125 @@
+/* 1. Define Your New Color Palette (Consistency is Key!) */
+:root {
+    --tea-green: #ccd5aeff;    /* New accent/highlight color (light green) */
+    --beige: #e9edc9ff;        /* Another light, complementary tone */
+    --cornsilk: #fefae0ff;     /* Very light tone, good for backgrounds/notes */
+    --papaya-whip: #faedcdff;  /* Your current main body background */
+    --buff: #d4a373ff;         /* Your current primary accent color (brown/tan) */
+    --text-color: #333333;     /* Dark gray for main text */
+    --white: white;
+    --light-border: #e0e0e0;
+}
+
+/* Existing Colors & Body Styles */
+.body-colors {
+    background-color: var(--papaya-whip); /* Used old #faedcd */
+    color: var(--text-color);             /* Used old #333333 */
+    margin: 0;
+    
+    /* Flexbox setup for Sticky Footer */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.descr-text {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.description-container {
+    margin-bottom: 40px;
+}
+
+/* Bottom Band - Now a Sticky Footer */
+.bottom-band {
+  width: 100vw; 
+  height: 50px; 
+  background-color: var(--buff); /* Used old #d4a373 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: auto; /* Pushes it to the bottom */
+}
+
+/* Style for the text inside the footer */
+.footer-text {
+    color: var(--white);
+    margin: 0;
+    font-size: 0.9em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* --- New Styles for Footer Icon --- */
+.github-link {
+    color: var(--white);
+    text-decoration: none;
+    margin-left: 15px;
+    font-size: 1.2em;
+    transition: color 0.3s;
+}
+
+.github-link:hover {
+    color: var(--tea-green); /* NEW ACCENT on hover */
+}
+
+/* --- New Styles for Graphs --- */
+
+.main-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.graph-container {
+    background-color: var(--tea-green);
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); /* Lighter shadow */
+}
+
+/* Title Styling (Above the Graph) */
+.graph-title {
+    color: var(--buff); /* Used old #d4a373 */
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+}
+
+/* Graph Placeholder (where your visualization goes) */
+.graph-placeholder {
+    width: 100%;
+    min-height: 300px;
+    border: 1px solid var(--light-border);
+    background-color: var(--white);
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-color);
+    font-style: italic;
+}
+
+/* Description Styling (Below the Graph) */
+.graph-description {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    color: var(--text-color);
+    padding: 10px;
+    border-left: 5px solid var(--buff); /* NEW ACCENT color */
+    background-color: var(--cornsilk); /* NEW light background for the note */
+    margin-top: 20px;
+}
+
+/* Separator between graph sections */
+.section-divider {
+    border: 0;
+    height: 1px;
+    background-color: var(--buff); /* Used old #d4a373 */
+    margin: 40px 0;
+    opacity: 0.5;
+}
